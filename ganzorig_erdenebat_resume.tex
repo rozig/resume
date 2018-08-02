@@ -1,0 +1,174 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://rozig.me/}{\Large Ganzorig Erdenebat}} & Address: 751 W Bode Circle, Hoffman Estates, IL 60169 \\
+  \href{https://rozig.me/}{https://rozig.me} & Mobile: +1 (312) 404-1266 \\
+  Email: \href{mailto:the.ganzorig25@gmail.com}{the.ganzorig25@gmail.com} & LinkedIn: \href{https://www.linkedin.com/in/rozig/}{https://www.linkedin.com/in/rozig/} \\
+\end{tabular*}
+
+%-----------SUMMARY-----------------
+\section{Summary}
+\justify
+Accomplished full-stack developer with 2 years of experience playing key role in development, deployment, and
+support of enterprise-level software. Strong technical skills, with hands-on experience in both front-end and back-
+end development using Django and Angular web frameworks. Personable team player with talent for collaborating
+with diverse technical teams. Experience successfully implementing projects with web services, design patterns
+and latest frameworks.
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Maharishi University of Management}{Fairfield, IA}
+      {Master of Science in Computer Science;  GPA: 4.00}{Oct. 2017 - Present}
+
+    \resumeSubheading
+      {Mongolian University of Science and Technology}{Ulaanbaatar, Mongolia}
+      {Bachelor of Science in Software Engineering;  GPA: 3.46}{Aug. 2013 - Jan. 2017}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Infinite Solutions LLC}{Ulaanbaatar, Mongolia}
+      {Full Stack Developer}{Jun. 2016 - Nov. 2017}
+      \resumeItemListStart
+        \resumeItem{Transfer}
+          {Transfer is a fintech solution for receiving and sending money over the world. Worked on core system, API services and front-end development.}
+        \resumeItem{Mobicom Branded Application}
+          {Managed back-end server for Mobicom Branded Application. Performed back-end development, API services development, testing and maintenance and database design.}
+        \resumeItem{Golds Gym Website}
+          {Developed official website for Golds Gym Mongolia. Conducted unit testing and maintenance. Performed front-end and back-end development.}
+        \resumeItem{ArigBank}
+          {In-charge of maintenance and front-end development.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Online Publication Platform}
+      {Clone of Medium.com, built RESTful API Services for front-end use and implemented authentication with JWT (JSON Web Token). Developed on MEAN Stack (MongoDB, ExpressJS, Angular 5, NodeJS) using Sublime Text, Git, Terminal, NPM, Amazon S3, and Google Cloud Platform.}
+    \resumeSubItem{Mumagram}
+      {Developed Instagram-like web application for MUM students using Java Servlet for back-end, JSP with UI-Kit and jQuery for front-end development, MySQL for database. Used Sublime Text, Git, Terminal, Bower, Amazon S3, Google Cloud Platform and Maven.}
+    \resumeSubItem{Online Banking Application}
+      {Developed web application that allows user to transfer money and manage accounts. Used Spring for back-end, Angular 5 for front-end development and MySQL for database. Used tools are Sublime Text, Git, Terminal and Maven.}
+    \resumeSubItem{Nutrition Calculator}
+      {Developed nutrition calculation web application on Django (Python); created HTML templates using Bootstrap. Used PostgreSQL for database and Django ORM for mapping. Used Sublime Text, Anaconda, Terminal and Git.}
+    \resumeSubItem{Logistics System}
+      {Developed web application for cargo delivery service on Django (Python). Created HTML templates using Bootstrap and used PostgreSQL for database and Django ORM for mapping. Used Sublime Text, pip, Terminal and Git.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Python, PHP, JavaScript, TypeScript, Bash, SQL}
+     \hfill
+     \textbf{SDLC}{: Agile/SCRUM, RUP, Waterfall}
+   }
+   \item{
+     \textbf{Web}{: jQuery, CSS3/HTML5, SASS, Express}
+     \hfill
+     \textbf{Frameworks}{: Django, Symfony, NodeJS, Angular 2/4/5}
+   }
+   \item{
+     \textbf{Web/App Servers}{: Nginx, Apache2, Node}
+     \hfill
+     \textbf{Databases}{: MySQL, PostgreSQL, MongoDB, SQLAlchemy}
+   }
+   \item{
+     \textbf{Design Patterns}{: Factory Method, Singleton, Adapter, MVC}
+     \hfill
+     \textbf{Web Services}{: RESTful, Django REST}
+   }
+   \item{
+     \textbf{Tools}{: Git, Vim, Terminal, AWS, Google Cloud Platform, Bash, zsh}
+     \hfill
+     \textbf{Platforms}{: UNIX/Linux, Windows}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
