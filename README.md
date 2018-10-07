@@ -7,4 +7,4 @@ One page resume. Template by [Sourabh Bajaj](https://github.com/sb2nov).
 ![Resume Screenshot](/resume_preview.jpg)
 
 ### License
-Format is MIT but all the data is owned by Sourabh Bajaj.
+Format is MIT but all the data is owned by Ganzorig Erdenebat.
