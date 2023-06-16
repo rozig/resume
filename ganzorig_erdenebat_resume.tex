@@ -17,6 +17,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage[T1]{fontenc}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -44,28 +45,40 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
+\newcommand{\experienceItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+\newcommand{\skillItem}[4]{
+  \item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#1:} #2 & \textbf{#3: } #4
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\experienceSubHeading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}, \textit{\small #3} & \textit{\small #4} | #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\educationSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectItem}[2]{\experienceItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,116 +88,118 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://rozig.github.io/}{\Large Ganzorig Erdenebat}} & Address: Mountain View, CA \\
-  \href{https://rozig.github.io/}{https://rozig.github.io} & Mobile: +1 (312) 404-1266 \\
-  Email: \href{mailto:the.ganzorig25@gmail.com}{the.ganzorig25@gmail.com} & LinkedIn: \href{https://www.linkedin.com/in/rozig/}{https://www.linkedin.com/in/rozig/} \\
+  \textbf{\href{https://rozig.github.io/}{\Large Ganzorig Erdenebat}} & \href{https://www.linkedin.com/in/rozig/}{https://www.linkedin.com/in/rozig} \\
+  \href{mailto:the.ganzorig25@gmail.com}{the.ganzorig25@gmail.com} | +1 (312) 404-1266 | Mountain View, CA & \href{https://rozig.github.io}{https://rozig.github.io} \\
 \end{tabular*}
 
 %-----------SUMMARY-----------------
-% \section{Summary}
-% \justify
-% Accomplished software engineer with over 3 years of experience playing key role in system design, development, deployment and support of enterprise-level software. Personable team player with talent for collaborating with diverse technical teams.
+\section{Summary}
+\justify
+Result driven software engineer with 6 years of experience specializing in distributed systems and backend systems. Skilled in designing, developing, and optimizing scalable and fault-tolerant solutions for complex infrastructures. 
 
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {WithMe Health}{San Mateo, CA}
-      {Senior Software Engineer}{Feb. 2021 - Present}
+  \resumeItemListStart
+    \experienceSubHeading
+      {Mux}{San Francisco, CA}
+      {Software Engineer}{May. 2022 - Present}
       \resumeItemListStart
-        \resumeItem{Cross platform mobile app development}
-          {Worked on react-native project for member facing application that manages user's personal data and instant-messaging. Technologies used: React-Native, Redux, styled-components, SASS, Sendbird, OKTA, Split.io, MS AppCenter.}
-        \resumeItem{Web application development}
-          {Worked on web application features for pharmacy guides to manage patient's data and support them with instant-mesasging and call center. Technologies used: React.js, Redux, styled-components, SASS, Sendbird, AWS Connect, Split.io.}
-        \resumeItem{Microservice development}
-          {Worked on a multiple microservices which handles user authentication/authorization, API gateways for web and mobile applications, data pipelines. Technologies used: Python, PostgreSQL, FastAPI, Kafka, Kong Gateway, Okta, Elasticsearch, Cassandra, Airflow.}
-        \resumeItem{3rd party integration}
-          {Built external facing RESTful API for use of external vendors and also worked on the other 3rd party system integrations. Technologies used: Python, FastAPI, Docker, K8s, AWS, Jenkins, Elasticsearch.}
-        \resumeItem{Data ingestion pipeline}
-          {Worked on enhancements in the parts of the pipeline to decrease process time. Overall process time has been decreased by 30\%. Technologies used: Python, PostgreSQL, Kafka, Elasticsearch, Cassandra, Airflow.}
+        \experienceItem{Mux Dashboard}
+          {Built new features and functionalities for the billing system, such as: 3D Secure verification support for the credit cards, additional analytical instruments to better understand the user conversion rate, multi-tier usage based pricing and cloud marketplace integration (i.e. AWS, GCP, Azure etc). \textit{Technologies used: Elixir, Phoenix, React.js, Exq, Oban, PostgreSQL, CockroachDB, Clickhouse, Redis, AWS, K8s, Bazel, Buildkite.}}
+        \experienceItem{Real-Time Video usage API}
+          {Built a real-time video usage API, enabling developers to access and understand the usage of the Real-Time video product by collecting usage data from clusters deployed in multi-regions. \textit{Technologies used: Go, gRPC, Protobuf, Kafka, Clickhouse, AWS, K8s, Bazel, Buildkite.}}
       \resumeItemListEnd
 
-    \resumeSubheading
+    \experienceSubHeading
+      {WithMe Health}{San Mateo, CA}
+      {Senior Software Engineer}{Feb. 2021 - May. 2022}
+      \resumeItemListStart
+        % \experienceItem{Cross platform mobile app development}
+        %   {Developed and maintained ADA compliant cross-platform applications using React Native, ensuring consistent functionality and user experience across both iOS and Android operating systems. Technologies used: React-Native, Redux, Sendbird, Okta, Split.io, MS AppCenter.}
+        \experienceItem{Pharmaceutical guide application}
+          {Built new features to support interactions between pharmaceutical guides and patients with instant-messaging, patient call center and assessment system on the React.js web application. \textit{Technologies used: React.js, Redux, Sendbird, AWS Connect, Split.io.}}
+        \experienceItem{Microservices}
+          {Led the efforts of building and delivering microservices responsible for handling user authentication/authorization, and API gateways for web and mobile applications. \textit{Technologies used: Python, FastAPI, PostgreSQL, Kafka, Kong Gateway, Okta.}}
+        \experienceItem{3rd party integration}
+          {Led the successful integration of third-party systems (Script Care, Consociate ...) and APIs to further enhance the data ingestion pipeline, enabling seamless data exchange and enhancing functionality. \textit{Technologies used: Python, FastAPI.}}
+        \experienceItem{Data ingestion pipeline}
+          {Worked on optimization efforts of the ETL pipeline, resulting in improved data processing efficiency, reduced latency, and enhanced scalability that resulted in 33\% faster processing time. \textit{Technologies used: Python, PostgreSQL, Kafka, Elasticsearch, Cassandra, Hazelcast IMDG, Airflow.}}
+      \resumeItemListEnd
+
+    \experienceSubHeading
       {WithMe Health}{San Mateo, CA}
       {Software Engineer}{Oct. 2019 - Feb. 2021}
       \resumeItemListStart
-        \resumeItem{Data ingestion pipeline}
-          {Worked on highly available data pipeline and developed internal framework. Technologies used: Python, PostgreSQL, Kafka, Elasticsearch, Cassandra.}
+        \experienceItem{Data ingestion pipeline}
+          {Worked on robust and scalable ETL pipeline, enabling efficient and reliable data acquisition from various sources. \textit{Technologies used: Python, PostgreSQL, Kafka, Elasticsearch, Cassandra.}}
+        \experienceItem{Internal framework}
+          {Led the development and implementation of an internal framework to streamline software development processes and enhance code reusability across projects which helped to increase the code re-usability by over 50\% through standardized development practices.}
       \resumeItemListEnd
 
-    \resumeSubheading
+    \experienceSubHeading
       {Genius Plaza Inc.}{Miami, FL}
       {Full-stack Developer}{Aug. 2018 - Sep. 2019}
       \resumeItemListStart
-        \resumeItem{Microservice development}
-          {Worked on monolith system to microservice transition. Developed microservices and API gateways. Worked on database normalization to improve performance. Technologies used: Python/Django, PostgreSQL, Docker, AWS ECS, AWS RDS, AWS S3, AWS ELB, AWS ROUTE53, Jenkins.}
-        \resumeItem{Genius Doctor}
-          {Worked on web application development. Conducted unit and automated testing. Implemented CI/CD pipline throught Jenkins to AWS S3. Technologies used: JavaScript, React.js, Redux, AWS S3, AWS CloudFront, Jenkins.}
+        \experienceItem{Monolith to microservices conversion}
+          {Worked on successful conversion of a monolithic system to microservices architecture resulting in improved scalability, maintainability, observability and deployment efficiency. \textit{Technologies used: Python/Django, PostgreSQL, Docker, AWS ECS, AWS RDS, AWS S3, AWS ELB, AWS Route53, AWS CloudWatch, Jenkins.}}
+        \experienceItem{Database optimization}
+          {Performed database normalization and optimized SQL queries that helped to cut down overall query execution time by 45\%.}
+        % \experienceItem{Genius Doctor}
+        %   {Developed and maintained responsive and user-friendly web application ensuring seamless user experience across various devices and browsers. Developed and integrated unit and automated testing system into the CI/CD pipline to ensure reliablity of the release. Technologies used: JavaScript, React.js, Redux, Jest/Enzyme, AWS S3, AWS CloudFront, Jenkins, Selenium.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Infinite Solutions LLC}{Ulaanbaatar, Mongolia}
-      {Full-stack Developer}{Jun. 2016 - Nov. 2017}
-      \resumeItemListStart
-        \resumeItem{Mobicom Branded Application}
-          {Managed back-end server for Mobicom Branded Application. Performed back-end system, API services development, testing and maintenance and database design. Technologies used: Python/Django, MySQL, CentOS, JavaScript, Bootstrap.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
- \resumeSubHeadingListStart
-   \item{
-     \textbf{Languages}{: Python, JavaScript, TypeScript}
-     \hfill
-     \textbf{Frameworks}{: Django, Flask, FastAPI, NodeJS}
-   }
-   \item{
-     \textbf{Web}{: React, Webpack, Redux}
-     \hfill
-     \textbf{Web Services}{: REST, DjangoREST, GraphQL}
-   }
-   \item{
-     \textbf{Other}{: AWS, GCP, AppCenter, Elasticsearch, K8s}
-     \hfill
-     \textbf{Databases}{: MySQL, PgSQL, SQLAlchemy, Cassandra}
-   }
- \resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------------
-% \section{Projects}
-%   \resumeSubHeadingListStart
-%     \resumeSubItem{React.js boilerplate}
-%       {Boilerplate project for React.js. Used webpack, styled-components and react-router.}
-%     \resumeSubItem{Online Publication Platform}
-%       {Clone of Medium.com, built RESTful API and implemented JWT authentication.}
-%     \resumeSubItem{Mumagram}
-%       {Instagram-like social networking web application for MUM students.}
-%     \resumeSubItem{MUMSched}
-%       {Academic scheduling web application for MUM students.}
-%     \resumeSubItem{Nutrition Calculator}
-%       {Nutrition calculator web application on Django (Python).}
-%     \resumeSubItem{Logistics System}
-%       {Web application for cargo delivery on Django (Python).}
-%   \resumeSubHeadingListEnd
+    % \experienceSubHeading
+    %   {Infinite Solutions LLC}{Ulaanbaatar, Mongolia}
+    %   {Full-stack Developer}{Jun. 2016 - Nov. 2017}
+  \resumeItemListEnd
 
 
 %-----------EDUCATION-----------------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
+  \resumeItemListStart
+    \educationSubheading
       {Maharishi University of Management}{Fairfield, IA}
       {Master of Science in Computer Science;  GPA: 3.80}{Oct. 2017 - Jun. 2020}
 
-    \resumeSubheading
+    \educationSubheading
       {Mongolian University of Science and Technology}{Ulaanbaatar, Mongolia}
       {Bachelor of Science in Software Engineering;  GPA: 3.46}{Aug. 2013 - Jan. 2017}
-  \resumeSubHeadingListEnd
+  \resumeItemListEnd
 
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeItemListStart
+    \skillItem
+      {Languages}{Elixir, Python, JavaScript/TypeScript, Go}
+      {Frameworks}{Phoenix, Django, Flask, FastAPI}
+    \skillItem
+      {Web}{React, Redux, CSS3/HTML5/SASS}
+      {Web Services}{REST, gRPC, GraphQL}
+    \skillItem
+      {Databases}{PostgreSQL, Clickhouse, Redis}
+      {Other}{Git, K8s, Docker, AWS, GCP, Kafka, Elasticsearch}
+  \resumeItemListEnd
+
+
+%-----------PROJECTS-----------------
+% \section{Projects}
+%   \resumeItemListStart
+%     \projectItem{React.js boilerplate}
+%       {Boilerplate project for React.js. Used webpack, styled-components and react-router.}
+%     \projectItem{Online Publication Platform}
+%       {Clone of Medium.com, built RESTful API and implemented JWT authentication.}
+%     \projectItem{Mumagram}
+%       {Instagram-like social networking web application for MUM students.}
+%     \projectItem{MUMSched}
+%       {Academic scheduling web application for MUM students.}
+%     \projectItem{Nutrition Calculator}
+%       {Nutrition calculator web application on Django (Python).}
+%     \projectItem{Logistics System}
+%       {Web application for cargo delivery on Django (Python).}
+%   \resumeItemListEnd
 
 %-------------------------------------------
 \end{document}
+
