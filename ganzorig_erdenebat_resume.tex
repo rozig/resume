@@ -45,27 +45,23 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\experienceItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\skillItem}[4]{
+\newcommand{\skill}[4]{
   \item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1:} #2 & \textbf{#3: } #4
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\experienceSubHeading}[4]{
+\newcommand{\experience}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1}, \textit{\small #3} & \textit{\small #4} | #2 \\
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\educationSubheading}[4]{
+\newcommand{\achievement}[1]{\item\small{#1}}
+
+\newcommand{\education}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -73,12 +69,8 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\projectItem}[2]{\experienceItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\sectionStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\sectionEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,113 +85,85 @@
 \end{tabular*}
 
 %-----------SUMMARY-----------------
-\section{Summary}
+\section{Software Engineer}
 \justify
-Result driven software engineer with 6 years of experience specializing in distributed systems and backend systems. Skilled in designing, developing, and optimizing scalable and fault-tolerant solutions for complex infrastructures. 
-
-
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeItemListStart
-    \experienceSubHeading
-      {Mux}{San Francisco, CA}
-      {Software Engineer}{May. 2022 - Present}
-      \resumeItemListStart
-        \experienceItem{Mux Dashboard}
-          {Built new features and functionalities for the billing system, such as: 3D Secure verification support for the credit cards, additional analytical instruments to better understand the user conversion rate, multi-tier usage based pricing and cloud marketplace integration (i.e. AWS, GCP, Azure etc). \textit{Technologies used: Elixir, Phoenix, React.js, Exq, Oban, PostgreSQL, CockroachDB, Clickhouse, Redis, AWS, K8s, Bazel, Buildkite.}}
-        \experienceItem{Real-Time Video usage API}
-          {Built a real-time video usage API, enabling developers to access and understand the usage of the Real-Time video product by collecting usage data from clusters deployed in multi-regions. \textit{Technologies used: Go, gRPC, Protobuf, Kafka, Clickhouse, AWS, K8s, Bazel, Buildkite.}}
-      \resumeItemListEnd
-
-    \experienceSubHeading
-      {WithMe Health}{San Mateo, CA}
-      {Senior Software Engineer}{Feb. 2021 - May. 2022}
-      \resumeItemListStart
-        % \experienceItem{Cross platform mobile app development}
-        %   {Developed and maintained ADA compliant cross-platform applications using React Native, ensuring consistent functionality and user experience across both iOS and Android operating systems. Technologies used: React-Native, Redux, Sendbird, Okta, Split.io, MS AppCenter.}
-        \experienceItem{Pharmaceutical guide application}
-          {Built new features to support interactions between pharmaceutical guides and patients with instant-messaging, patient call center and assessment system on the React.js web application. \textit{Technologies used: React.js, Redux, Sendbird, AWS Connect, Split.io.}}
-        \experienceItem{Microservices}
-          {Led the efforts of building and delivering microservices responsible for handling user authentication/authorization, and API gateways for web and mobile applications. \textit{Technologies used: Python, FastAPI, PostgreSQL, Kafka, Kong Gateway, Okta.}}
-        \experienceItem{3rd party integration}
-          {Led the successful integration of third-party systems (Script Care, Consociate ...) and APIs to further enhance the data ingestion pipeline, enabling seamless data exchange and enhancing functionality. \textit{Technologies used: Python, FastAPI.}}
-        \experienceItem{Data ingestion pipeline}
-          {Worked on optimization efforts of the ETL pipeline, resulting in improved data processing efficiency, reduced latency, and enhanced scalability that resulted in 33\% faster processing time. \textit{Technologies used: Python, PostgreSQL, Kafka, Elasticsearch, Cassandra, Hazelcast IMDG, Airflow.}}
-      \resumeItemListEnd
-
-    \experienceSubHeading
-      {WithMe Health}{San Mateo, CA}
-      {Software Engineer}{Oct. 2019 - Feb. 2021}
-      \resumeItemListStart
-        \experienceItem{Data ingestion pipeline}
-          {Worked on robust and scalable ETL pipeline, enabling efficient and reliable data acquisition from various sources. \textit{Technologies used: Python, PostgreSQL, Kafka, Elasticsearch, Cassandra.}}
-        \experienceItem{Internal framework}
-          {Led the development and implementation of an internal framework to streamline software development processes and enhance code reusability across projects which helped to increase the code re-usability by over 50\% through standardized development practices.}
-      \resumeItemListEnd
-
-    \experienceSubHeading
-      {Genius Plaza Inc.}{Miami, FL}
-      {Full-stack Developer}{Aug. 2018 - Sep. 2019}
-      \resumeItemListStart
-        \experienceItem{Monolith to microservices conversion}
-          {Worked on successful conversion of a monolithic system to microservices architecture resulting in improved scalability, maintainability, observability and deployment efficiency. \textit{Technologies used: Python/Django, PostgreSQL, Docker, AWS ECS, AWS RDS, AWS S3, AWS ELB, AWS Route53, AWS CloudWatch, Jenkins.}}
-        \experienceItem{Database optimization}
-          {Performed database normalization and optimized SQL queries that helped to cut down overall query execution time by 45\%.}
-        % \experienceItem{Genius Doctor}
-        %   {Developed and maintained responsive and user-friendly web application ensuring seamless user experience across various devices and browsers. Developed and integrated unit and automated testing system into the CI/CD pipline to ensure reliablity of the release. Technologies used: JavaScript, React.js, Redux, Jest/Enzyme, AWS S3, AWS CloudFront, Jenkins, Selenium.}
-      \resumeItemListEnd
-
-    % \experienceSubHeading
-    %   {Infinite Solutions LLC}{Ulaanbaatar, Mongolia}
-    %   {Full-stack Developer}{Jun. 2016 - Nov. 2017}
-  \resumeItemListEnd
-
-
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeItemListStart
-    \educationSubheading
-      {Maharishi University of Management}{Fairfield, IA}
-      {Master of Science in Computer Science;  GPA: 3.80}{Oct. 2017 - Jun. 2020}
-
-    \educationSubheading
-      {Mongolian University of Science and Technology}{Ulaanbaatar, Mongolia}
-      {Bachelor of Science in Software Engineering;  GPA: 3.46}{Aug. 2013 - Jan. 2017}
-  \resumeItemListEnd
+Software engineer with 6 years of experience specializing in back end, and scaling complex distributed systems. Skilled in designing, developing, and optimizing scalable and fault-tolerant solutions for complex infrastructures.
 
 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
-  \resumeItemListStart
-    \skillItem
-      {Languages}{Elixir, Python, JavaScript/TypeScript, Go}
+  \sectionStart
+    \skill
+      {Languages}{Python, Elixir, JavaScript/TypeScript, Go}
       {Frameworks}{Phoenix, Django, Flask, FastAPI}
-    \skillItem
+    \skill
       {Web}{React, Redux, CSS3/HTML5/SASS}
       {Web Services}{REST, gRPC, GraphQL}
-    \skillItem
+    \skill
       {Databases}{PostgreSQL, Clickhouse, Redis}
       {Other}{Git, K8s, Docker, AWS, GCP, Kafka, Elasticsearch}
-  \resumeItemListEnd
+  \sectionEnd
 
 
-%-----------PROJECTS-----------------
-% \section{Projects}
-%   \resumeItemListStart
-%     \projectItem{React.js boilerplate}
-%       {Boilerplate project for React.js. Used webpack, styled-components and react-router.}
-%     \projectItem{Online Publication Platform}
-%       {Clone of Medium.com, built RESTful API and implemented JWT authentication.}
-%     \projectItem{Mumagram}
-%       {Instagram-like social networking web application for MUM students.}
-%     \projectItem{MUMSched}
-%       {Academic scheduling web application for MUM students.}
-%     \projectItem{Nutrition Calculator}
-%       {Nutrition calculator web application on Django (Python).}
-%     \projectItem{Logistics System}
-%       {Web application for cargo delivery on Django (Python).}
-%   \resumeItemListEnd
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \sectionStart
+    \experience
+      {Mux}{San Francisco, CA}
+      {Software Engineer}{May. 2022 - Present}
+      \sectionStart
+        \achievement{Worked with data and real-time video team to build RESTful API that fetch and aggregate data from multi-region deployed services which helps real-time video customers to get usage details per session basis.}
+        \achievement{Replaced multi-tier usage based pricing with multi-dimensional usage based pricing logic without sacrificing the efficiency that enabled customers to be billed more accurately at video resolution based pricing.}
+        \achievement{Led the efforts of supporting Strong Customer Authentication requirement in the payment system and worked with cross-functional teams to reduce the payment failures which increased the payment success rate by 15\%.}
+      \sectionEnd
 
-%-------------------------------------------
+    \experience
+      {WithMe Health}{San Mateo, CA}
+      {Senior Software Engineer}{Feb. 2021 - May. 2022}
+      \sectionStart
+        \achievement{Led the design and implementation of a data model restructuring (FHIR to customized specification) that is used by the medical records to support ease of use and avoid complex data processing, which reduced single record size by 60\% - 80\% and reduced overall processing time by 20\%.}
+        \achievement{Worked on the optimization efforts of the mobile applications (React Native) load time that involved refactoring API server and data fetching logic in the mobile application which reduced the load time by 45\%.}
+        \achievement{Built new features to support interactions between pharmaceutical guides and patients with instant-messaging, patient call center and patient medical assessment system on the React.js web application.}
+        \achievement{Led the successful integration of third-party systems (Script Care, Consociate ...) and APIs to further enhance the data ingestion pipeline, enabling seamless data exchange and enhancing functionality.}
+      \sectionEnd
+
+    \experience
+      {WithMe Health}{San Mateo, CA}
+      {Software Engineer}{Oct. 2019 - Feb. 2021}
+      \sectionStart
+        \achievement{Worked on optimization efforts of the ETL pipeline, resulting in improved data processing efficiency, reduced latency, and enhanced scalability that resulted in 30\% faster overall processing time.}
+        \achievement{Led the design and implementation of an internal framework to streamline software development processes and enhance code re-usability across projects which helped to increase the code re-usability by over 50\% through standardized development practices.}
+      \sectionEnd
+
+    \experience
+      {Genius Plaza Inc.}{Miami, FL}
+      {Full-stack Developer}{Aug. 2018 - Sep. 2019}
+      \sectionStart
+        \achievement{Worked on successful conversion of a monolithic system to micro-services architecture resulting in improved scalability, maintainability, observability and deployment efficiency.}
+        \achievement{Performed database normalization and optimized SQL queries that helped to cut down overall query execution time by 45\%.}
+        \achievement{Built and maintained responsive and user-friendly web application ensuring seamless user experience across various devices and browsers. Developed and integrated unit and automated testing system into the CI/CD pipeline to ensure reliability of the release.}
+      \sectionEnd
+
+    % \experience
+    %   {Infinite Solutions LLC}{Ulaanbaatar, Mongolia}
+    %   {Full-stack Developer}{Jun. 2016 - Nov. 2017}
+    %   \sectionStart
+    %     \achievement{Implemented new backend services for the telecommunication service's mobile application allowing customers to make payment, shop with digital currency.}
+    %     \achievement{Built the front-end application for sport fantasy web application using React.js.}
+    %     \achievement{Implemented new features for multiple backend and frontend applications using PHP on the backend and Angular.js/Angular 2 on the frontend.}
+    %   \sectionEnd
+  \sectionEnd
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \sectionStart
+    \education
+      {Maharishi University of Management}{Fairfield, IA}
+      {Master of Science in Computer Science;  GPA: 3.80}{Oct. 2017 - Jun. 2020}
+
+    \education
+      {Mongolian University of Science and Technology}{Ulaanbaatar, Mongolia}
+      {Bachelor of Science in Software Engineering;  GPA: 3.46}{Aug. 2013 - Jan. 2017}
+  \sectionEnd
 \end{document}
-
